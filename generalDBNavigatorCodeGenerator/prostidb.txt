@@ -1,0 +1,12 @@
+SqlCeEngine engine = new SqlCeEngine("Data Source=" + currentDBName +"\"");
+
+            string connectionString = "Data Source=" + currentDBName + ";";
+         SqlCeConnection cnn = new SqlCeConnection(connectionString);
+         cnn.Open();
+
+           // engine.CreateDatabase();
+            
+
+            DataTable td = new DataTable("");
+         td = reader.GetSchemaTable();
+         MessageBox.Show(td.Columns[0].ToString())
